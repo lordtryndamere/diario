@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<p><strong>identificacion: </strong>{{ object.id }} </p>
+<p><strong>Nombres: </strong>{{ object.nombres }} </p>
+<p><strong>Apellidos: </strong>{{ object.apellidos }} </p>
+<p><strong>Fecha de Nacimiento: </strong>{{ object.fecha_nacimiento }} </p>
+<p><strong>email: </strong>{{ object.email }} </p>
+<p><strong>Deporte: </strong>{{ object.deporte }} </p>
+
+<a class= "btn btn-success" href="{% url 'jugadores:jugador_listar' %}">Ok</a>
+<a class= "btn btn-primary" href="{% url 'jugadores:jugador_editar' object.id%}">Editar</a>
+<a class="btn btn-danger" href="{% url 'jugadores:jugador_eliminar' object.id %}">Eliminar</a>
+
+{% endblock %}
